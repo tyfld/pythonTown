@@ -1,9 +1,18 @@
-from Classes.Humain import Humain
+from Classes.Brigand import Brigand
+from Classes.Cowboy import Cowboy
+from Classes.Dame import Dame
 
 if __name__ == "__main__":
-    humain = Humain("David", "eau")
+    brigand = Brigand("Bill","tord-boyaux")
+    cowboy = Cowboy("John", "whisky")
+    dame = Dame("Daisy","rouge","lait")
 
 
 #Notre scénario
-humain.se_presenter()
-humain.boire()
+brigand.se_presenter()
+cowboy.se_presenter()
+dame.se_presenter()
+
+brigand.kidnapper(dame)
+cowboy.tirer(brigand)
+cowboy.liberer(dame)
