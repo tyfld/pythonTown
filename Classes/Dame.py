@@ -7,7 +7,8 @@ class Dame(Humain):
         self.__est_captive = False
 
     def se_presenter(self):
-        return super().se_presenter()
+        super().se_presenter()
+        self.parle(f"Avez-vous remarqué ma belle robe {self.__couleur_robe} ? Je l'adore tellement !")
     
     def quelEstTonNom(self):
         return f"Miss {super().quelEstTonNom()}"

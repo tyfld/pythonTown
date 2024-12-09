@@ -10,7 +10,9 @@ class Brigand(Humain):
         self.__en_prison = False
 
     def se_presenter(self):
-        return super().se_presenter()
+        super().se_presenter()
+        self.parle(f"J'ai l'air {self.__look} et j'ai déjà kidnappé {self.__dames_enlevées} dames !")
+        self.parle(f"Ma tête est mise à prix à {self.__prime} !")
     
     def quelEstTonNom(self):
         return f"{ super().quelEstTonNom()} le {self.__look}"

@@ -9,7 +9,8 @@ class Cowboy(Humain):
         self.__adjectif = adjectif
 
     def se_presenter(self):
-        return super().se_presenter()
+        super().se_presenter()
+        self.parle(f"Les habitants disent que je suis {self.__adjectif}. Ma côte de popularité est à {self.__popularite} !")
     
     def quelEstTonNom(self):
         return super().quelEstTonNom()
