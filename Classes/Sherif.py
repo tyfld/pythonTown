@@ -23,3 +23,6 @@ class Sherif(Humain):
     def rechercher(self, brigand):
         if isinstance(brigand, Brigand) and not brigand.__en_prison:
             self.parle(f"OYER OYER BRAVE GENS !!! {brigand.avoir_prime} à qui arrêtera {brigand.quelEstTonNom} mort ou vif !")
+
+    def manger(self, aliment):
+        print(f"{self.quelEstTonNom()} mange du {aliment} avec politesse.")

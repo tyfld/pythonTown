@@ -25,3 +25,6 @@ class Cowboy(Humain):
         if isinstance(brigand, Brigand):
             print(f"Le {self.__adjectif} {self.quelEstTonNom()} tire sur {brigand.quelEstTonNom()}. PAN !")
             self.parle(f"Prends ça, rascal !")
+
+    def manger(self, aliment):
+        print(f"{self.quelEstTonNom()} mange du {aliment} avec appétit.")

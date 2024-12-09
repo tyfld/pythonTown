@@ -15,3 +15,6 @@ class Barman(Humain):
     def servir(self, humain):
         if isinstance(humain, Humain):
             self.parle(f"Tenez {humain.quelEstTonNom()}, voici un verre de {humain.quelleEstTaBoissonPref()}, coco.")
+
+    def manger(self, aliment):
+        print(f"{self.quelEstTonNom()} grignote du {aliment} entre deux services.")

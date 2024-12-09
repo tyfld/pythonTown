@@ -29,3 +29,6 @@ class Dame(Humain):
     def changer_de_robe(self, nouvelle_couleur):
         self.__couleur_robe = nouvelle_couleur
         self.parle(f"Regarder la nouvelle robe que j'ai acheté ! Elle est magnifique en {self.__couleur_robe} !")
+
+    def manger(self, aliment):
+        print(f"{self.quelEstTonNom()} mange une {aliment} avec élégance.")

@@ -1,4 +1,6 @@
-class Humain():
+from abc import ABC, abstractmethod
+
+class Humain(ABC): # Module ABC (Abstract Base Classes) utilisé pour définir une classe abstraite
     def __init__(self, nom, boisson_pref="eau"):
         self.__nom = nom
         self.__boisson_pref = boisson_pref
@@ -17,3 +19,7 @@ class Humain():
     
     def quelleEstTaBoissonPref(self):
         return self.__boisson_pref
+    
+    @abstractmethod
+    def manger(self, aliment):
+        pass

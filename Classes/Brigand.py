@@ -32,4 +32,7 @@ class Brigand(Humain):
         if isinstance(sherif, Sherif):
             self.__en_prison = True
             self.parle(f"Damned, je suis fait ! {sherif.quelEstTonNom()}, tu m'as eu !")
+
+    def manger(self, aliment):
+        print(f"{self.quelEstTonNom()} mange du {aliment} avec bruyamment.")
             
