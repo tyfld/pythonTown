@@ -2,12 +2,14 @@ from Classes.Brigand import Brigand
 from Classes.Cowboy import Cowboy
 from Classes.Dame import Dame
 from Classes.Barman import Barman
+from Classes.Sherif import Sherif
 
 if __name__ == "__main__":
     brigand = Brigand("Bill","tord-boyaux")
     cowboy = Cowboy("John", "whisky")
     dame = Dame("Daisy","rouge","lait")
     barman = Barman("Tony", "Tony", "vin")
+    sherif = Sherif("Robert", "wisky")
 
 
 #Notre scénario
@@ -27,3 +29,9 @@ cowboy.se_presenter()
 print()
 barman.se_presenter()
 barman.servir(cowboy)
+
+print()
+sherif.se_presenter()
+sherif.rechercher(brigand)
+sherif.coffrer(brigand)
+sherif.se_presenter()

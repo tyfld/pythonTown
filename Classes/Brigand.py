@@ -1,5 +1,6 @@
 from .Humain import Humain
 from .Dame import Dame
+from .Sherif import Sherif
 
 class Brigand(Humain):
     def __init__(self, nom, boisson_pref="tord-boyaux", look="méchant", prime=100):
@@ -24,9 +25,11 @@ class Brigand(Humain):
             self.parle(f"Ah ah ! {dame.quelEstTonNom()}, tu es mienne désormais !")
             dame.se_faire_enlever()
 
-    def connaitre_prime(self):
+    def avoir_prime(self):
         return self.__prime
     
     def emprisonner(self, sherif):
-        pass
+        if isinstance(sherif, Sherif):
+            self.__en_prison = True
+            self.parle(f"Damned, je suis fait ! {sherif.quelEstTonNom()}, tu m'as eu !")
             
