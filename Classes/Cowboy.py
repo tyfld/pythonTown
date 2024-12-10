@@ -27,4 +27,4 @@ class Cowboy(Humain):
             self.parle(f"Prends ça, rascal !")
 
     def manger(self, aliment):
-        print(f"{self.quelEstTonNom()} mange du {aliment} avec appétit.")
+        print(f"{self.quelEstTonNom()} mange une {aliment} avec appétit.")

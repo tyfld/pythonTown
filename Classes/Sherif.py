@@ -1,7 +1,7 @@
-from .Humain import Humain
+from .Cowboy import Cowboy
 from .Brigand import Brigand
 
-class Sherif(Humain):
+class Sherif(Cowboy):
     def __init__(self, nom, boisson_pref="wisky", adjectif="honnête"):
         super().__init__(nom, boisson_pref, adjectif)
         self.__brigands_coffres = 0
@@ -15,7 +15,6 @@ class Sherif(Humain):
     
     def coffrer(self, brigand):
         if isinstance(brigand, Brigand) and not brigand.__en_prison:
-            from .Cowboy import Cowboy # Import du cowboy delayée poour éviter une erreur d'import circulaire
             self.__brigands_coffres += 1
             self.parle(f"Au nom de la loi, je vous arrête !")
             brigand.emprisonner(self)
