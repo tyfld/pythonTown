@@ -8,19 +8,19 @@ class Sherif(Cowboy):
 
     def se_presenter(self):
         super().se_presenter()
-        self.parle(f"Je suis quelqu'un d'{self.__adjectif} et j'ai déjà coffré {self.__brigands_coffres} brigands !")
+        self.parle(f"Je suis quelqu'un d'honnête et j'ai déjà coffré {self.__brigands_coffres} brigands !")
 
     def quelEstTonNom(self):
         return f"Shérif {super().quelEstTonNom()}"
     
     def coffrer(self, brigand):
-        if isinstance(brigand, Brigand) and not brigand.__en_prison:
+        if isinstance(brigand, Brigand):
             self.__brigands_coffres += 1
             self.parle(f"Au nom de la loi, je vous arrête !")
             brigand.emprisonner(self)
 
     def rechercher(self, brigand):
-        if isinstance(brigand, Brigand) and not brigand.__en_prison:
+        if isinstance(brigand, Brigand):
             self.parle(f"OYER OYER BRAVE GENS !!! {brigand.avoir_prime} à qui arrêtera {brigand.quelEstTonNom} mort ou vif !")
 
     def manger(self, aliment):
