@@ -8,7 +8,7 @@ class Sherif(Cowboy):
 
     def se_presenter(self):
         super().se_presenter()
-        self.parle(f"Je suis quelqu'un d'honnête et j'ai déjà coffré {self.__brigands_coffres} brigands !")
+        self.parle(f"J'ai déjà coffré {self.__brigands_coffres} brigands !")
 
     def quelEstTonNom(self):
         return f"Shérif {super().quelEstTonNom()}"
